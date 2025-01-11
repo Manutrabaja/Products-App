@@ -1,0 +1,15 @@
+Prisma SQLite
+
+
+1- instalamos prisma
+        npm i prisma --save-dev              
+
+2- iniciamos    Realiza cambios en env.ts / crea el archivo schema.prisma
+        npx prisma init
+
+3- migracion -> prepara la base de datos para que lusca como el schema 
+        npx prisma migrate dev --name init
+
+4- cliente de base de datos     
+        npm install @prisma/client
+        
