@@ -8,16 +8,21 @@ export class ProductsService extends PrismaClient implements OnModuleInit {
   private readonly logger = new Logger('ProductusService');
 
   onModuleInit() {
-
+    
     this.$connect();
     this.logger.log('Datebase connected');
   }
+
   create(createProductDto: CreateProductDto) {
-    return 'This action adds a new product';
+
+    return this.product.create({
+      data: createProductDto
+    });
+    
   }
 
   findAll() {
-    return `This action returns all products`;
+    return this.product.findMany({}) ;
   }
 
   findOne(id: number) {
